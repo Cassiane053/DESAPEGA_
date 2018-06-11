@@ -36,9 +36,9 @@
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.btSalvar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
-            this.imagemCliente = new System.Windows.Forms.PictureBox();
             this.btRemover = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.imagemCliente)).BeginInit();
+            this.imagemUsuario = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.imagemUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -111,17 +111,6 @@
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
-            // imagemCliente
-            // 
-            this.imagemCliente.Image = global::FoodTruck.Grafico.Properties.Resources.user;
-            this.imagemCliente.Location = new System.Drawing.Point(324, 12);
-            this.imagemCliente.Name = "imagemCliente";
-            this.imagemCliente.Size = new System.Drawing.Size(100, 72);
-            this.imagemCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imagemCliente.TabIndex = 8;
-            this.imagemCliente.TabStop = false;
-            this.imagemCliente.Click += new System.EventHandler(this.imagemCliente_Click);
-            // 
             // btRemover
             // 
             this.btRemover.Location = new System.Drawing.Point(41, 151);
@@ -132,13 +121,24 @@
             this.btRemover.UseVisualStyleBackColor = true;
             this.btRemover.Click += new System.EventHandler(this.btRemover_Click);
             // 
+            // imagemUsuario
+            // 
+            this.imagemUsuario.Image = global::FoodTruck.Grafico.Properties.Resources.Student_color_icon;
+            this.imagemUsuario.Location = new System.Drawing.Point(299, 22);
+            this.imagemUsuario.Name = "imagemUsuario";
+            this.imagemUsuario.Size = new System.Drawing.Size(125, 94);
+            this.imagemUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagemUsuario.TabIndex = 8;
+            this.imagemUsuario.TabStop = false;
+            this.imagemUsuario.Click += new System.EventHandler(this.imagemCliente_Click);
+            // 
             // TelaCadastrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 186);
             this.Controls.Add(this.btRemover);
-            this.Controls.Add(this.imagemCliente);
+            this.Controls.Add(this.imagemUsuario);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btSalvar);
             this.Controls.Add(this.tbEmail);
@@ -149,7 +149,7 @@
             this.Controls.Add(this.label1);
             this.Name = "TelaCadastrarUsuario";
             this.Text = "Cadastrar Usuário";
-            ((System.ComponentModel.ISupportInitialize)(this.imagemCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagemUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,7 +165,7 @@
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Button btSalvar;
         private System.Windows.Forms.Button btCancelar;
-        private System.Windows.Forms.PictureBox imagemCliente;
+        private System.Windows.Forms.PictureBox imagemUsuario;
         private System.Windows.Forms.Button btRemover;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace FoodTruck.Grafico
+﻿namespace Desapega.Grafico
 {
     partial class TelaRemoverProdutoTroca
     {
@@ -43,7 +43,7 @@
             this.cbxProdutos.Name = "cbxProdutos";
             this.cbxProdutos.Size = new System.Drawing.Size(310, 21);
             this.cbxProdutos.TabIndex = 0;
-            this.cbxProdutos.SelectedIndexChanged += new System.EventHandler(this.cbxBebidas_SelectedIndexChanged);
+            this.cbxProdutos.SelectedIndexChanged += new System.EventHandler(this.cbxProdutos_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -97,7 +97,7 @@
             this.Controls.Add(this.cbxProdutos);
             this.Name = "TelaRemoverProdutoTroca";
             this.Text = "Remover Produto da Troca";
-            this.Shown += new System.EventHandler(this.TelaRemoverBebidaPedido_Shown);
+            this.Shown += new System.EventHandler(this.TelaRemoverProdutoTroca_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

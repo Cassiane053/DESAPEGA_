@@ -1,16 +1,10 @@
 ﻿
-using FoodTruck.Negocio;
+using Desapega.Negocio;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FoodTruck.Grafico
+namespace Desapega.Grafico
 {
     public partial class TelaCadastrarTroca : Form
     {
@@ -22,20 +16,20 @@ namespace FoodTruck.Grafico
 
         private void ConfigurarCombobox()
         {
-            cbCliente.DisplayMember = "Nome";
-            cbCliente.ValueMember = "CPF";
+            cbUsuario.DisplayMember = "Nome";
+            cbUsuario.ValueMember = "CPF";
         }
 
-        private void CarregarComboboxClientes()
+        private void CarregarComboboxUsuarios()
         {
-            List<Usuario> clientes = Util.Gerenciador.ClientesCadastrados();
-            cbCliente.DataSource = clientes;
+            List<Usuario> usuarios = Util.Gerenciador.UsuariosCadastrados();
+            cbUsuario.DataSource = usuarios;
         }
 
-        //carrega pedido
-        private void TelaCadastrarPedido_Load(object sender, EventArgs e)
+        //carrega troca
+        private void TelaCadastrarTroca_Load(object sender, EventArgs e)
         {
-            CarregarComboboxClientes();
+            CarregarComboboxUsuarios();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -47,13 +41,13 @@ namespace FoodTruck.Grafico
         {
             try
             {
-                Troca pedido = new Troca();
+                Troca troca = new Troca();
                 pedido.Id = Convert.ToInt64(tbId.Text);
                 pedido.Data = DateTime.ParseExact(tbData.Text, "dd/MM/yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-                String clienteCpf = (String)cbCliente.SelectedValue;
+                String clienteCpf = (String)cbUsuario.SelectedValue;
                 pedido.Cliente = Util.Gerenciador.BuscarClientePorCPF(clienteCpf);
                 Util.Gerenciador.AdicionarPedido(pedido);
-                MessageBox.Show("Pedido cadastrado com sucesso!");
+                MessageBox.Show("Troca cadastrada com sucesso!");
                 
                 this.Close();                 
             }catch(Exception ex)
@@ -94,6 +88,11 @@ namespace FoodTruck.Grafico
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbUsuario_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

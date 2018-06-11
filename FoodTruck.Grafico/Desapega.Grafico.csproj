@@ -183,6 +183,30 @@
   <ItemGroup>
     <None Include="Resources\delete-user.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desapega.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\synchronize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Acoustic-Monitoring-Feature-Mobile-Update.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student+color+icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

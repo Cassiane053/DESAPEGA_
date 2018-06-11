@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FoodTruck.Negocio;
+using Desapega.Negocio;
 
-namespace FoodTruck.Grafico
+namespace Desapega.Grafico
 {
     public partial class ListarProdutos : Form
     {

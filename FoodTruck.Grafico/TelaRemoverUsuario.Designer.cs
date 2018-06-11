@@ -1,4 +1,4 @@
-﻿namespace FoodTruck.Grafico
+﻿namespace Desapega.Grafico
 {
     partial class TelaRemoverUsuario
     {
@@ -70,9 +70,9 @@
             this.lbClientes.AutoSize = true;
             this.lbClientes.Location = new System.Drawing.Point(38, 102);
             this.lbClientes.Name = "lbClientes";
-            this.lbClientes.Size = new System.Drawing.Size(47, 13);
+            this.lbClientes.Size = new System.Drawing.Size(46, 13);
             this.lbClientes.TabIndex = 3;
-            this.lbClientes.Text = "Clientes:";
+            this.lbClientes.Text = "Usuário:";
             // 
             // cbxUsuarios
             // 
@@ -81,7 +81,7 @@
             this.cbxUsuarios.Name = "cbxUsuarios";
             this.cbxUsuarios.Size = new System.Drawing.Size(291, 21);
             this.cbxUsuarios.TabIndex = 4;
-            this.cbxUsuarios.SelectedIndexChanged += new System.EventHandler(this.cbxClientes_SelectedIndexChanged);
+            this.cbxUsuarios.SelectedIndexChanged += new System.EventHandler(this.cbxUsuarios_SelectedIndexChanged);
             // 
             // TelaRemoverUsuario
             // 
