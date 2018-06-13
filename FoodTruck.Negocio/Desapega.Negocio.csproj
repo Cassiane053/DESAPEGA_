@@ -7,8 +7,8 @@
     <ProjectGuid>{BF5CE6A1-0122-4C8D-B8B9-7F7E1D6B9575}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FoodTruck.Negocio</RootNamespace>
-    <AssemblyName>FoodTruck.Negocio</AssemblyName>
+    <RootNamespace>Desapega.Negocio</RootNamespace>
+    <AssemblyName>Desapega.Negocio</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
