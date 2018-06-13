@@ -1,4 +1,4 @@
-﻿namespace FoodTruck.Grafico
+﻿namespace Desapega.Grafico
 {
     partial class ListarUsuarios
     {
@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgCliente = new System.Windows.Forms.DataGridView();
+            this.dgUsuario = new System.Windows.Forms.DataGridView();
             this.btAtualizar = new System.Windows.Forms.Button();
-            this.tbCadastrarCliente = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
+            this.tbCadastrarUsuario = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUsuario)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgCliente
+            // dgUsuario
             // 
-            this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCliente.Location = new System.Drawing.Point(12, 12);
-            this.dgCliente.Name = "dgCliente";
-            this.dgCliente.Size = new System.Drawing.Size(582, 232);
-            this.dgCliente.TabIndex = 0;
-            this.dgCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCliente_CellContentClick);
+            this.dgUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgUsuario.Location = new System.Drawing.Point(12, 12);
+            this.dgUsuario.Name = "dgUsuario";
+            this.dgUsuario.Size = new System.Drawing.Size(582, 232);
+            this.dgUsuario.TabIndex = 0;
+            this.dgUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgUsuario_CellContentClick);
             // 
             // btAtualizar
             // 
@@ -53,36 +53,36 @@
             this.btAtualizar.UseVisualStyleBackColor = true;
             this.btAtualizar.Click += new System.EventHandler(this.btAtualizar_Click);
             // 
-            // tbCadastrarCliente
+            // tbCadastrarUsuario
             // 
-            this.tbCadastrarCliente.Location = new System.Drawing.Point(428, 263);
-            this.tbCadastrarCliente.Name = "tbCadastrarCliente";
-            this.tbCadastrarCliente.Size = new System.Drawing.Size(75, 23);
-            this.tbCadastrarCliente.TabIndex = 2;
-            this.tbCadastrarCliente.Text = "Adicionar";
-            this.tbCadastrarCliente.UseVisualStyleBackColor = true;
-            this.tbCadastrarCliente.Click += new System.EventHandler(this.tbCadastrarCliente_Click);
+            this.tbCadastrarUsuario.Location = new System.Drawing.Point(428, 263);
+            this.tbCadastrarUsuario.Name = "tbCadastrarUsuario";
+            this.tbCadastrarUsuario.Size = new System.Drawing.Size(75, 23);
+            this.tbCadastrarUsuario.TabIndex = 2;
+            this.tbCadastrarUsuario.Text = "Adicionar";
+            this.tbCadastrarUsuario.UseVisualStyleBackColor = true;
+            this.tbCadastrarUsuario.Click += new System.EventHandler(this.tbCadastrarUsuario_Click);
             // 
-            // TelaRemoverCliente
+            // ListarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 297);
-            this.Controls.Add(this.tbCadastrarCliente);
+            this.Controls.Add(this.tbCadastrarUsuario);
             this.Controls.Add(this.btAtualizar);
-            this.Controls.Add(this.dgCliente);
-            this.Name = "TelaRemoverCliente";
-            this.Text = "ListarClientes";
-            this.Load += new System.EventHandler(this.ListarClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).EndInit();
+            this.Controls.Add(this.dgUsuario);
+            this.Name = "ListarUsuarios";
+            this.Text = "Listar Usuários";
+            this.Load += new System.EventHandler(this.ListarUsuarios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgCliente;
+        private System.Windows.Forms.DataGridView dgUsuario;
         private System.Windows.Forms.Button btAtualizar;
-        private System.Windows.Forms.Button tbCadastrarCliente;
+        private System.Windows.Forms.Button tbCadastrarUsuario;
     }
 }

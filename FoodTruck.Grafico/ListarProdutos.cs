@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Desapega.Negocio;
 
@@ -22,32 +16,32 @@ namespace Desapega.Grafico
         //o que vai aparecer na lista
         private void ConfigurarDg()
         {
-            dgBebidas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgBebidas.ColumnCount = 4;
-            dgBebidas.ColumnHeadersVisible = true;
-            dgBebidas.Columns[0].Name = "Código";
-            dgBebidas.Columns[0].DataPropertyName = "Id";
-            dgBebidas.Columns[0].ReadOnly = true;
-            dgBebidas.Columns[1].Name = "Nome";
-            dgBebidas.Columns[1].DataPropertyName = "Nome";
-            dgBebidas.Columns[1].ReadOnly = true;
-            dgBebidas.Columns[2].Name = "Preço";
-            dgBebidas.Columns[2].DataPropertyName = "Valor";
-            dgBebidas.Columns[2].ReadOnly = true;
-            dgBebidas.Columns[3].Name = "Tamanho (ml)";
-            dgBebidas.Columns[3].DataPropertyName = "Tamanho";
-            dgBebidas.Columns[3].ReadOnly = true;
-            dgBebidas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgProdutos.ColumnCount = 4;
+            dgProdutos.ColumnHeadersVisible = true;
+            dgProdutos.Columns[0].Name = "Código";
+            dgProdutos.Columns[0].DataPropertyName = "Id";
+            dgProdutos.Columns[0].ReadOnly = true;
+            dgProdutos.Columns[1].Name = "Nome";
+            dgProdutos.Columns[1].DataPropertyName = "Nome";
+            dgProdutos.Columns[1].ReadOnly = true;
+            dgProdutos.Columns[2].Name = "Preço";
+            dgProdutos.Columns[2].DataPropertyName = "Valor";
+            dgProdutos.Columns[2].ReadOnly = true;
+            dgProdutos.Columns[3].Name = "Tamanho (ml)";
+            dgProdutos.Columns[3].DataPropertyName = "Tamanho";
+            dgProdutos.Columns[3].ReadOnly = true;
+            dgProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-        //puxa as bebidas inseridas na lista
+        //puxa os produtos inseridos na lista
         private void CarregarDados()
         {
-            List<Bebida> bebidas = Util.Gerenciador.BebidasCadastradas();
-            dgBebidas.DataSource = bebidas;
+            List<Produto> produtos = Util.Gerenciador.ProdutosCadastrados();
+            dgProdutos.DataSource = produtos;
         }
 
-        private void ListarBebidas_Load(object sender, EventArgs e)
+        private void ListarProdutos_Load(object sender, EventArgs e)
         {
             CarregarDados();
         }
@@ -70,14 +64,14 @@ namespace Desapega.Grafico
             CarregarDados();
         }
 
-        private void dgBebidas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgProdutos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            object obj = Util.GetCellValueFromColumnHeader(dgBebidas.SelectedRows[0].Cells, "Id");
+            object obj = Util.GetCellValueFromColumnHeader(dgProdutos.SelectedRows[0].Cells, "Id");
 
             if (obj == null)
                 return;
 
-            long Id = (long)Util.GetCellValueFromColumnHeader(dgBebidas.SelectedRows[0].Cells, "Id");
+            long Id = (long)Util.GetCellValueFromColumnHeader(dgProdutos.SelectedRows[0].Cells, "Id");
 
             TelaCadastrarProduto tela = new TelaCadastrarProduto(Id);
             tela.FormClosed += Tela_FormClosed;
@@ -85,7 +79,7 @@ namespace Desapega.Grafico
             tela.Show();
         }
 
-        private void dgBebidas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

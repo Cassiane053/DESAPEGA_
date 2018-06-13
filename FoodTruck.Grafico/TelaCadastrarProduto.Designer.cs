@@ -1,4 +1,4 @@
-﻿namespace FoodTruck.Grafico
+﻿namespace Desapega.Grafico
 {
     partial class TelaCadastrarProduto
     {
@@ -195,8 +195,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.TextBox tbNome;
-        private System.Windows.Forms.TextBox tbValor;
-        private System.Windows.Forms.TextBox tbTamanho;
+        //private System.Windows.Forms.TextBox tbValor;
+        //private System.Windows.Forms.TextBox tbTamanho;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;

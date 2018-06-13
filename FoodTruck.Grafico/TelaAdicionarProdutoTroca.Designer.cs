@@ -107,7 +107,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbBebidas;
+        private System.Windows.Forms.ComboBox cbProdutos;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.PictureBox pictureBox1;

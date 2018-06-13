@@ -1,4 +1,4 @@
-﻿using FoodTruck.Negocio;
+﻿using Desapega.Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FoodTruck.Grafico
+namespace Desapega.Grafico
 {
     public partial class ListarUsuarios : Form
     {
@@ -22,29 +22,29 @@ namespace FoodTruck.Grafico
         //modo como as colunas vão ficar
         private void ConfigurarDatagrid()
         {
-            dgCliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgCliente.ColumnCount = 3;
-            dgCliente.ColumnHeadersVisible = true;
-            dgCliente.Columns[0].Name = "CPF";
-            dgCliente.Columns[0].DataPropertyName = "CPF";
-            dgCliente.Columns[0].ReadOnly = true;
-            dgCliente.Columns[1].Name = "Nome";
-            dgCliente.Columns[1].DataPropertyName = "Nome";
-            dgCliente.Columns[1].ReadOnly = true;
-            dgCliente.Columns[2].Name = "Email";
-            dgCliente.Columns[2].DataPropertyName = "Email";
-            dgCliente.Columns[2].ReadOnly = true;
-            dgCliente.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgUsuario.ColumnCount = 3;
+            dgUsuario.ColumnHeadersVisible = true;
+            dgUsuario.Columns[0].Name = "CPF";
+            dgUsuario.Columns[0].DataPropertyName = "CPF";
+            dgUsuario.Columns[0].ReadOnly = true;
+            dgUsuario.Columns[1].Name = "Nome";
+            dgUsuario.Columns[1].DataPropertyName = "Nome";
+            dgUsuario.Columns[1].ReadOnly = true;
+            dgUsuario.Columns[2].Name = "Email";
+            dgUsuario.Columns[2].DataPropertyName = "Email";
+            dgUsuario.Columns[2].ReadOnly = true;
+            dgUsuario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void Atualizar()
         {
-            List<Usuario> clientes = Util.Gerenciador.ClientesCadastrados();
-            dgCliente.DataSource = clientes;
+            List<Usuario> usuarios = Util.Gerenciador.UsuariosCadastrados();
+            dgUsuario.DataSource = usuarios;
         }
 
         
-        private void ListarClientes_Load(object sender, EventArgs e)
+        private void ListarUsuarios_Load(object sender, EventArgs e)
         {
             Atualizar();
         }
@@ -54,7 +54,7 @@ namespace FoodTruck.Grafico
             Atualizar();
         }
 
-        private void tbCadastrarCliente_Click(object sender, EventArgs e)
+        private void tbCadastrarUsuario_Click(object sender, EventArgs e)
         {
             TelaCadastrarUsuario cadastro = new TelaCadastrarUsuario();
             cadastro.FormClosed += Cadastro_FormClosed;
@@ -73,14 +73,14 @@ namespace FoodTruck.Grafico
             Atualizar();
         }
 
-        private void dgCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            object obj = Util.GetCellValueFromColumnHeader(dgCliente.SelectedRows[0].Cells, "CPF");
+            object obj = Util.GetCellValueFromColumnHeader(dgUsuario.SelectedRows[0].Cells, "CPF");
 
             if (obj == null)
                 return;
 
-            String CPF = (String)Util.GetCellValueFromColumnHeader(dgCliente.SelectedRows[0].Cells, "CPF");
+            String CPF = (String)Util.GetCellValueFromColumnHeader(dgUsuario.SelectedRows[0].Cells, "CPF");
 
             TelaCadastrarUsuario tela = new TelaCadastrarUsuario(CPF);
             tela.FormClosed += Tela_FormClosed;

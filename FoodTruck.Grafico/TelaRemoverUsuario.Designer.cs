@@ -106,7 +106,7 @@
         private System.Windows.Forms.Button bt_Cancelar;
         private System.Windows.Forms.Button bt_Remover;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbClientes;
+        private System.Windows.Forms.Label lbUsuarios;
         private System.Windows.Forms.ComboBox cbxUsuarios;
     }
 }

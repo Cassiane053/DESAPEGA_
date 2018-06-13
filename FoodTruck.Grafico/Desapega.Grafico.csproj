@@ -7,8 +7,8 @@
     <ProjectGuid>{BD9ECAAC-AC08-4DF5-B766-A3905B87F14C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FoodTruck.Grafico</RootNamespace>
-    <AssemblyName>FoodTruck.Grafico</AssemblyName>
+    <RootNamespace>Desapega.Grafico</RootNamespace>
+    <AssemblyName>Desapega.Grafico</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

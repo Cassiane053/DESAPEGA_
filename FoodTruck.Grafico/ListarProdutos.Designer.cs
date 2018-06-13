@@ -1,4 +1,4 @@
-﻿namespace FoodTruck.Grafico
+﻿namespace Desapega.Grafico
 {
     partial class ListarProdutos
     {
@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgBebidas = new System.Windows.Forms.DataGridView();
+            this.dgProdutos = new System.Windows.Forms.DataGridView();
             this.btAdicionar = new System.Windows.Forms.Button();
             this.btAtualizar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgBebidas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProdutos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgBebidas
+            // dgProdutos
             // 
-            this.dgBebidas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgBebidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgBebidas.Location = new System.Drawing.Point(13, 13);
-            this.dgBebidas.Name = "dgBebidas";
-            this.dgBebidas.Size = new System.Drawing.Size(790, 377);
-            this.dgBebidas.TabIndex = 0;
-            this.dgBebidas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgBebidas_CellContentClick);
-            this.dgBebidas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgBebidas_CellDoubleClick);
+            this.dgProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgProdutos.Location = new System.Drawing.Point(13, 13);
+            this.dgProdutos.Name = "dgProdutos";
+            this.dgProdutos.Size = new System.Drawing.Size(790, 377);
+            this.dgProdutos.TabIndex = 0;
+            this.dgProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgBebidas_CellContentClick);
+            this.dgProdutos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgBebidas_CellDoubleClick);
             // 
             // btAdicionar
             // 
@@ -69,25 +69,25 @@
             this.btAtualizar.UseVisualStyleBackColor = true;
             this.btAtualizar.Click += new System.EventHandler(this.btAtualizar_Click);
             // 
-            // ListarBebidas
+            // ListarProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 447);
             this.Controls.Add(this.btAtualizar);
             this.Controls.Add(this.btAdicionar);
-            this.Controls.Add(this.dgBebidas);
-            this.Name = "ListarBebidas";
-            this.Text = "ListarBebidas";
+            this.Controls.Add(this.dgProdutos);
+            this.Name = "ListarProdutos";
+            this.Text = "Listar Produtos";
             this.Load += new System.EventHandler(this.ListarBebidas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgBebidas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProdutos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgBebidas;
+        private System.Windows.Forms.DataGridView dgProdutos;
         private System.Windows.Forms.Button btAdicionar;
         private System.Windows.Forms.Button btAtualizar;
     }

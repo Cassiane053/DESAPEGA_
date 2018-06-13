@@ -1,4 +1,5 @@
-﻿namespace Desapega.Grafico
+﻿using Desapega.Grafico;
+namespace Desapega.Grafico
 {
     partial class TelaRemoverProdutoTroca
     {

@@ -1,4 +1,4 @@
-﻿using FoodTruck.Negocio;
+﻿using Desapega.Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,25 +9,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FoodTruck.Grafico
+namespace Desapega.Grafico
 {
     public partial class ListarTrocas : Form
     {
         public ListarTrocas()
         {
             InitializeComponent();
-            dgPedidos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgPedidos.MultiSelect = false;
-            dgPedidos.ReadOnly = true;
+            dgTrocas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgTrocas.MultiSelect = false;
+            dgTrocas.ReadOnly = true;
         }
 
         private void CarregarDados()
         {
-            List<Troca> pedidos = Util.Gerenciador.PedidosCadastrados();
-            dgPedidos.DataSource = pedidos;
+            List<Troca> trocas = Util.Gerenciador.TrocasCadastradas();
+            dgTrocas.DataSource = trocas;
         }
 
-        private void ListarPedidos_Load(object sender, EventArgs e)
+        private void ListarTrocas_Load(object sender, EventArgs e)
         {
             CarregarDados();
         }
@@ -37,7 +37,7 @@ namespace FoodTruck.Grafico
             CarregarDados();
         }
 
-        //adiciona um pedido
+        //adiciona uma troca
         private void btAdicionar_Click(object sender, EventArgs e)
         {
             TelaCadastrarTroca tela = new TelaCadastrarTroca();
@@ -51,19 +51,19 @@ namespace FoodTruck.Grafico
             CarregarDados();
         }
 
-        //adiciona uma bebida
-        private void tbAdicionarBebida_Click(object sender, EventArgs e)
+        //adiciona um produto
+        private void tbAdicionarProduto_Click(object sender, EventArgs e)
         {
-            if (dgPedidos.SelectedRows.Count == 0)
+            if (dgTrocas.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um pedido");
+                MessageBox.Show("Selecione um produto");
                 return;
             }
 
-            Int64 pedidoId = (Int64) dgPedidos.SelectedRows[0].Cells[0].Value;
+            Int64 trocaId = (Int64) dgTrocas.SelectedRows[0].Cells[0].Value;
             TelaAdicionarProdutoTroca tela = new TelaAdicionarProdutoTroca();
             tela.FormClosed += Tela_FormClosed1;
-            tela.PedidoId = pedidoId;
+            tela.PedidoId = trocaId;
             tela.MdiParent = this.MdiParent;
             tela.Show();
         }
@@ -74,51 +74,55 @@ namespace FoodTruck.Grafico
         }
 
         
-        private void tbLanche_Click(object sender, EventArgs e)
+        /*private void tbLanche_Click(object sender, EventArgs e)
         {
-            if (dgPedidos.SelectedRows.Count == 0)
+            if (dgTrocas.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione o pedido");
                 return;
             }
 
-            Int64 pedidoId = (Int64)dgPedidos.SelectedRows[0].Cells[0].Value;
+            Int64 pedidoId = (Int64)dgTrocas.SelectedRows[0].Cells[0].Value;
             TelaAdicionarLanchePedido tela = new TelaAdicionarLanchePedido();
             tela.FormClosed += Tela_FormClosed1;
             tela.PedidoId = pedidoId;
             tela.MdiParent = this.MdiParent;
             tela.Show();
-        }
+        }*/
 
-        private void btnRemoverBebida_Click(object sender, EventArgs e)
+        private void btnRemoverProduto_Click(object sender, EventArgs e)
         {
-            if (dgPedidos.SelectedRows.Count == 0)
+            if (dgTrocas.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione um pedido");
+                MessageBox.Show("Selecione um produto para troca");
                 return;
             }
 
-            Int64 pedidoId = (Int64)dgPedidos.SelectedRows[0].Cells[0].Value;
-            TelaRemoverProdutoTroca tela = new TelaRemoverProdutoTroca(pedidoId);
+            Int64 trocaId = (Int64)dgTrocas.SelectedRows[0].Cells[0].Value;
+            TelaRemoverProdutoTroca tela = new TelaRemoverProdutoTroca(trocaId);
             tela.FormClosed += Tela_FormClosed1;
             tela.MdiParent = this.MdiParent;
             tela.Show();
         }
 
-        //remover um lanche
-        private void btnRemoverLanche_Click(object sender, EventArgs e)
+        /*private void btnRemoverLanche_Click(object sender, EventArgs e)
         {
-            if (dgPedidos.SelectedRows.Count == 0)
+            if (dgTrocas.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione um pedido");
                 return;
             }
 
-            Int64 pedidoId = (Int64)dgPedidos.SelectedRows[0].Cells[0].Value;
+            Int64 trocaId = (Int64)dgTrocas.SelectedRows[0].Cells[0].Value;
             TelaRemoverLanchePedido tela = new TelaRemoverLanchePedido(pedidoId);
             tela.FormClosed += Tela_FormClosed1;
             tela.MdiParent = this.MdiParent;
             tela.Show();
+        }*/
+
+        private void dgTrocas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
