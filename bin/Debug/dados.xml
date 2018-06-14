@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DadosGravador xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Usuarios>
+    <Usuario>
+      <CPF>84536228910</CPF>
+      <Nome>Kamila da Silva</Nome>
+      <Email>kamila@gmail.com</Email>
+    </Usuario>
+    <Usuario>
+      <CPF>78655940312</CPF>
+      <Nome>Jean Cordeiro</Nome>
+      <Email>jean23@gmail.com</Email>
+    </Usuario>
+  </Usuarios>
+  <Produtos>
+    <Produto>
+      <Descricao>0</Descricao>
+      <Nome>Livro A Cabana</Nome>
+      <Id>23</Id>
+    </Produto>
+    <Produto>
+      <Descricao>0</Descricao>
+      <Nome>Mouse Acer</Nome>
+      <Id>67</Id>
+    </Produto>
+  </Produtos>
+  <Trocas>
+    <Troca>
+      <Id>23</Id>
+      <Data>2018-06-14T18:20:00</Data>
+      <Usuario>
+        <CPF>84536228910</CPF>
+        <Nome>Kamila da Silva</Nome>
+        <Email>kamila@gmail.com</Email>
+      </Usuario>
+      <Encerrado>false</Encerrado>
+      <Produtos />
+    </Troca>
+    <Troca>
+      <Id>67</Id>
+      <Data>2018-06-14T18:24:00</Data>
+      <Usuario>
+        <CPF>78655940312</CPF>
+        <Nome>Jean Cordeiro</Nome>
+        <Email>jean23@gmail.com</Email>
+      </Usuario>
+      <Encerrado>false</Encerrado>
+      <Produtos />
+    </Troca>
+  </Trocas>
+</DadosGravador>
